@@ -1,0 +1,13 @@
+services:
+    demo:
+      url: https://github.com/hcrhall/opa-on-azure-container-instances/raw/master
+bundles:
+  terraform:
+    service: demo
+    resource: bundles/policies.tar.gz
+decision_logs:
+  service: demo
+  console: true
+  reporting:
+    min_delay_seconds: 300
+    max_delay_seconds: 600
